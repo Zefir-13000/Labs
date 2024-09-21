@@ -2,9 +2,9 @@
 #include <cmath>
 #include <Windows.h>
 
-#define A_prc 0.9
-#define B_prc 0.85
-#define V_prc 0.8
+#define A_prc 0.10
+#define B_prc 0.15
+#define V_prc 0.20
 
 
 // |sin(x)/3,124 - cos(x^2)| - 8,3*sin(3x)
@@ -36,24 +36,26 @@ int main()
 	std::cout << "Введіть x: ";
 	std::cin >> x;
 
-	float Y = 0.f;
+	float Y, fee;
 	if (work_type == 'А') {
 		Y = 100 * fabs(func4(x) + 50);
-		Y *= A_prc;
+		fee = Y * A_prc;
 	}
 	else if (work_type == 'Б') {
 		Y = 150 * fabs(func5(x) + 100);
-		Y *= B_prc;
+		fee = Y * B_prc;
 	}
 	else if (work_type == 'В') {
 		Y = 100 * fabs(func6(x) + 135);
-		Y *= V_prc;
+		fee = Y * V_prc;
 	}
 	else {
 		std::cout << "Неправильний тип робіт!" << std::endl;
 		return 1;
 	}
 
-	std::cout << "result Y: " << Y << std::endl;
+	std::cout << "Нарахована сума: " << Y << std::endl;
+	std::cout << "Сума податку: " << fee << std::endl;
+	std::cout << "Сума до видачі: " << Y - fee << std::endl;
 	return 0;
 }
