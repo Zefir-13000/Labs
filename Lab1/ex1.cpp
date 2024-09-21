@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <cmath>
 
-inline static float func(float x) {
+float func(float x) {
 	return (x*x - x + 1) / sqrt(pow(x,3) + 4);
 }
 
