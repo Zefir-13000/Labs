@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <Windows.h>
 
 int main()
@@ -9,16 +9,16 @@ int main()
 	float notebook_price, cover_price;
 	int order_count;
 
-	std::cout << "Ââåä³òü ïî÷àòêîâ³ äàí³: " << std::endl;
-	std::cout << "Ö³íà çîøèòà: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð¿Ð¾Ñ‡Ð°Ñ‚ÐºÐ¾Ð²Ñ– Ð´Ð°Ð½Ñ–: " << std::endl;
+	std::cout << "Ð¦Ñ–Ð½Ð° Ð·Ð¾ÑˆÐ¸Ñ‚Ð°: ";
 	std::cin >> notebook_price;
-	std::cout << "Ö³íà îáêëàäèíêè: ";
+	std::cout << "Ð¦Ñ–Ð½Ð° Ð¾Ð±ÐºÐ»Ð°Ð´Ð¸Ð½ÐºÐ¸: ";
 	std::cin >> cover_price;
 
-	std::cout << "Ê³ëüê³ñòü êîìïëåêò³â: ";
+	std::cout << "ÐšÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑ‚Ñ–Ð²: ";
 	std::cin >> order_count;
 
 	float result = (notebook_price + cover_price) * order_count;
-	std::cout << "Âàðò³ñòü ïîêóïêè: " << result << " ãðí" << std::endl;
+	std::cout << "Ð’Ð°Ñ€Ñ‚Ñ–ÑÑ‚ÑŒ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸: " << result << " Ð³Ñ€Ð½" << std::endl;
 	return 0;
 }

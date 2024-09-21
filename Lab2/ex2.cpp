@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include <cmath>
 #include <Windows.h>
 
@@ -30,27 +30,27 @@ int main()
 	float x;
 	char work_type;
 
-	std::cout << "¬‚Â‰≥Ú¸ ÚËÔ Ó·≥Ú (¿, ¡, ¬): ";
+	std::cout << "–í–≤–µ–¥—ñ—Ç—å —Ç–∏–ø —Ä–æ–±—ñ—Ç (–ê, –ë, –í): ";
 	std::cin >> work_type;
 
-	std::cout << "¬‚Â‰≥Ú¸ x: ";
+	std::cout << "–í–≤–µ–¥—ñ—Ç—å x: ";
 	std::cin >> x;
 
 	float Y = 0.f;
-	if (work_type == '¿') {
+	if (work_type == '–ê') {
 		Y = 100 * fabs(func4(x) + 50);
 		Y *= A_prc;
 	}
-	else if (work_type == '¡') {
+	else if (work_type == '–ë') {
 		Y = 150 * fabs(func5(x) + 100);
 		Y *= B_prc;
 	}
-	else if (work_type == '¬') {
+	else if (work_type == '–í') {
 		Y = 100 * fabs(func6(x) + 135);
 		Y *= V_prc;
 	}
 	else {
-		std::cout << "ÕÂÔ‡‚ËÎ¸ÌËÈ ÚËÔ Ó·≥Ú!" << std::endl;
+		std::cout << "–ù–µ–ø—Ä–∞–≤–∏–ª—å–Ω–∏–π —Ç–∏–ø —Ä–æ–±—ñ—Ç!" << std::endl;
 		return 1;
 	}
 
