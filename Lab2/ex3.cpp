@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cstdint>
 #include <Windows.h>
 
 int main()
@@ -6,12 +7,12 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	int student_number;
+	uint16_t student_number;
 	std::cout << "Введіть номер студента: ";
 	std::cin >> student_number;
 
 	if (student_number <= 0 || student_number > 25) {
-		std::cout << "Некорректний номер студента.";
+        throw std::runtime_error("Некорректний номер студента.");
 		return 1;
 	}
 	
@@ -92,8 +93,8 @@ int main()
             std::cout << "Щербак В`ячеслав Олександрович";
             break;
         default:
-            std::cout << "unexpected error";
-            break;
+            throw std::runtime_error("unexpected error!");
+            return 1;
     }
 	return 0;
 }

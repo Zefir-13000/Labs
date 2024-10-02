@@ -1,10 +1,10 @@
 ﻿#include <iostream>
-#include <cmath>
+#include <stdfloat>
 
-#define PI 3.14159265358979323846
+constexpr auto PI = 3.14159265358979323846;
 
-inline static float func(float x) {
-	constexpr float a = 0.8f * PI;
+inline static float_t func(float_t x) {
+	constexpr float_t a = 0.8f * PI;
 	if (x < 0) {
 		return x * x + 1;
 	}
@@ -16,12 +16,12 @@ inline static float func(float x) {
 
 int main()
 {
-	float x;
+	float_t x;
 
 	std::cout << "Input x: ";
 	std::cin >> x;
 
-	float result = func(x);
+	float_t result = func(x);
 	std::cout << "result y: " << result << std::endl;
 	return 0;
 }
