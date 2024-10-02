@@ -11,7 +11,7 @@ int main() {
 
 	uint64_t sum = 0;
 	for (; a < b; ++a) {
-		if (a % 2 == 1)
+		if ((a & 1) == 1)
 			sum += a*a;
 	}
 
