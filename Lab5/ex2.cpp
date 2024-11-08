@@ -53,4 +53,5 @@ int main() {
     
     std::cout << "\nTable exp(x) Taylor:\n";
     print_table(exp_taylor, a, b, h);
+    return 0;
 }

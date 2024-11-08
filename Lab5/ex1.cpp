@@ -38,10 +38,13 @@ int main()
         }
         else if (x > 0)
         {
-            y = cos_taylor(x / 2) * cos_taylor(2 * x);
-            st = cos(x / 2) * cos(2 * x);
+            y = pow(cos_taylor(x / 2), 2) * cos_taylor(2 * x);
+            st = pow(cos(x / 2), 2) * cos(2 * x);
             err = st - y;
             printf("%f\t%f\t%f\t%.*e \n", x, y, st, 10, err);
+        }
+        else {
+            printf("%f\tNot defined! \n", x);
         }
     }
     return 0;
